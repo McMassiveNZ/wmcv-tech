@@ -12,7 +12,6 @@ set(MEMORY_SOURCE_FILES
 	include/foundation/memory/wmcv_allocator_linear.h
 	include/foundation/memory/wmcv_allocator_linear_concurrent.h
 	include/foundation/memory/wmcv_allocator_system.h
-	include/foundation/platform/wmcv_platform.h
 	src/memory/wmcv_allocator.cpp
 	src/memory/wmcv_allocator_linear.cpp
 	src/memory/wmcv_allocator_linear_concurrent.cpp
