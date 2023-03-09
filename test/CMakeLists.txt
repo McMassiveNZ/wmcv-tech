@@ -1,14 +1,25 @@
 include(${CMAKE_SCRIPTS_DIR}/googletest.cmake)
 
 add_executable(
-  blank-slate-test
-  test_main.cpp
+  wmcv-test
+  wmcv_test_pch.cpp
+  wmcv_test_pch.h
+  memory/test_utility.cpp
+  memory/test_allocator.cpp
+  memory/test_system_allocator.cpp
+  memory/test_linear_allocator.cpp
+  memory/test_allocator_mock.h
 )
 
 target_link_libraries(
-  blank-slate-test
+  wmcv-test PRIVATE 
   gtest_main
+  gmock_main
+  wmcv_foundation
 )
 
+target_include_directories(wmcv-test PUBLIC .)
+target_precompiled_header(wmcv-test wmcv_test_pch.h wmcv_test_pch.cpp)
+
 include(GoogleTest)
-gtest_discover_tests(blank-slate-test)
+gtest_discover_tests(wmcv-test)
