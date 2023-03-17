@@ -35,4 +35,4 @@ add_library(wmcv_foundation STATIC ${SOURCE_FILES})
 
 target_include_directories(wmcv_foundation PUBLIC include)
 target_compile_definitions(wmcv_foundation PUBLIC ${WMCV_PLATFORM})
-target_precompiled_headers(wmcv_foundation PUBLIC wmcv_foundation_pch.h)
+target_precompile_headers(wmcv_foundation PUBLIC wmcv_foundation_pch.h)
