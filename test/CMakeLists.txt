@@ -2,7 +2,6 @@ include(${CMAKE_SCRIPTS_DIR}/googletest.cmake)
 
 add_executable(
   wmcv-test
-  wmcv_test_pch.cpp
   wmcv_test_pch.h
   memory/test_utility.cpp
   memory/test_allocator.cpp
@@ -19,7 +18,7 @@ target_link_libraries(
 )
 
 target_include_directories(wmcv-test PUBLIC .)
-target_precompiled_header(wmcv-test wmcv_test_pch.h wmcv_test_pch.cpp)
+target_precompile_headers(wmcv-test PRIVATE wmcv_test_pch.h)
 
 include(GoogleTest)
 gtest_discover_tests(wmcv-test)

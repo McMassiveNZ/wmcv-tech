@@ -4,7 +4,6 @@ set(FOUNDATION_SOURCE_FILES
 	include/foundation/wmcv_utility.h
 	include/foundation/wmcv_types.h
 	include/wmcv_foundation_pch.h
-	src/wmcv_foundation_pch.cpp
 )
 
 set(MEMORY_SOURCE_FILES
@@ -35,4 +34,4 @@ add_library(wmcv_foundation STATIC ${SOURCE_FILES})
 
 target_include_directories(wmcv_foundation PUBLIC include)
 target_compile_definitions(wmcv_foundation PUBLIC ${WMCV_PLATFORM})
-target_precompile_headers(wmcv_foundation PUBLIC include/wmcv_foundation_pch.h)
+target_precompile_headers(wmcv_foundation PRIVATE include/wmcv_foundation_pch.h)
