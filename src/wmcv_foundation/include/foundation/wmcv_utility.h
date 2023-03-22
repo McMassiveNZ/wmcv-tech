@@ -49,17 +49,17 @@ template<typename T>
 
 }
 
-[[nodiscard]] constexpr std::size_t operator""_kB(std::size_t size)
+[[nodiscard]] constexpr wmcv_u64 operator""_kB(wmcv_u64 size)
 {
 	return size * 1024;
 }
 
-[[nodiscard]] constexpr std::size_t operator""_MB(std::size_t size)
+[[nodiscard]] constexpr wmcv_u64 operator""_MB(std::size_t size)
 {
 	return size * 1024 * 1024;
 }
 
-[[nodiscard]] constexpr std::size_t operator""_GB(std::size_t size)
+[[nodiscard]] constexpr wmcv_u64 operator""_GB(wmcv_u64 size)
 {
 	return size * 1024 * 1024 * 1024;
 }
