@@ -49,17 +49,17 @@ template<typename T>
 
 }
 
-[[nodiscard]] constexpr wmcv_u64 operator""_kB(wmcv_u64 size)
+[[nodiscard]] constexpr unsigned long long operator""_kB(unsigned long long size)
 {
 	return size * 1024;
 }
 
-[[nodiscard]] constexpr wmcv_u64 operator""_MB(std::size_t size)
+[[nodiscard]] constexpr unsigned long long operator""_MB(unsigned long long size)
 {
 	return size * 1024 * 1024;
 }
 
-[[nodiscard]] constexpr wmcv_u64 operator""_GB(wmcv_u64 size)
+[[nodiscard]] constexpr unsigned long long operator""_GB(unsigned long long size)
 {
 	return size * 1024 * 1024 * 1024;
 }
