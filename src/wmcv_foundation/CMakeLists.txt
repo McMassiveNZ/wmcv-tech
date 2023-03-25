@@ -21,6 +21,11 @@ if(MSVC)
         src/memory/wmcv_allocator_system_win32.cpp
     )
     list(APPEND MEMORY_SOURCE_FILES ${MEMORY_SOURCE_FILES_WINDOWS})
+elseif(UNIX)
+    set(MEMORY_SOURCE_FILES_NIX
+        src/memory/wmcv_allocator_system_nix.cpp
+    )
+    list(APPEND MEMORY_SOURCE_FILES ${MEMORY_SOURCE_FILES_NIX})
 endif()
 
 source_group("" FILES ${FOUNDATION_SOURCE_FILES})
