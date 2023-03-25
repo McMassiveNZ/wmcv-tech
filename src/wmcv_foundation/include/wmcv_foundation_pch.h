@@ -12,5 +12,6 @@
 #include <numeric>
 #include <algorithm>
 #include <atomic>
+#include <utility>
 
 #include "foundation/wmcv_types.h"
