@@ -12,7 +12,7 @@ using ::testing::AtLeast;
 class Mallocator : public wmcv::Allocator
 {
 public:
-	[[no_discard]] void* allocate(wmcv_size_t size) noexcept override
+	[[nodiscard]] void* allocate(wmcv_size_t size) noexcept override
 	{
 		return ::malloc(size);
 	}
